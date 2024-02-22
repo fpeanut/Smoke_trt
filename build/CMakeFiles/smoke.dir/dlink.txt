@@ -1,0 +1,1 @@
+/usr/local/cuda/bin/nvcc   -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/smoke.dir/src_modv2/preprocess.cu.o CMakeFiles/smoke.dir/src_modv2/smoke.cc.o -o CMakeFiles/smoke.dir/cmake_device_link.o  -L/usr/local/cuda/lib64  -L/usr/local/cuda/targets/x86_64-linux/lib  -lcuda -lcudart -lcublas -lcudadevrt -lcudart_static -lrt -lpthread -ldl 

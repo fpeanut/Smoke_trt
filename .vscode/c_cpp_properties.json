@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                // "/workspace/tensorrt/samples/common/",
+                "/usr/include/opencv",
+                // "/app/TensorRT/smoke_bushu/src_mod",
+                // "/work/smoke_bushu/src_mod",
+                // "/usr/include/opencv4",
+                "/usr/local/cuda/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

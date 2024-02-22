@@ -1,0 +1,92 @@
+cmake_minimum_required(VERSION 3.11)
+project(TensorRT_MODNet LANGUAGES CXX CUDA)
+
+set(CMAKE_CUDA_STANDARD 14)
+set(CMAKE_CXX_STANDARD 14)
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+find_package(TensorRT REQUIRED)
+find_package(OpenCV REQUIRED)
+find_package(Threads REQUIRED)
+
+include_directories(${OpenCV_INCLUDE_DIRS})
+include_directories(/usr/local/cuda/include)
+# include_directories(${TensorRT_SAMPLE_DIR}/common)
+include_directories(${CMAKE_SOURCE_DIR}/src_mod)
+include_directories(${CMAKE_SOURCE_DIR}/src_mod/common)
+
+link_directories(/usr/local/cuda/lib64/)
+
+add_library(mmcv_plugin SHARED
+    src_mod/plugin/trt_modulated_deform_conv_kernel.cu
+    src_mod/plugin/trt_cuda_helper.cu
+    src_mod/plugin/trt_modulated_deform_conv.cpp
+)
+target_include_directories(mmcv_plugin
+    PUBLIC
+    ${TensorRT_INCLUDE_DIRS}
+)
+
+target_link_libraries(mmcv_plugin
+    PUBLIC
+    -Wl,--no-as-needed,--gc-sections,--unresolved-symbols=ignore-in-shared-libs
+    cublas
+    ${TensorRT_LIBRARIES}
+)
+set_target_properties(mmcv_plugin PROPERTIES CUDA_ARCHITECTURES "61")
+
+add_library(engine SHARED
+    src_mod/engine.cu
+    ${CMAKE_SOURCE_DIR}/src_mod/common/logger.cpp
+)
+target_link_libraries(engine
+    PUBLIC
+    -Wl,--no-as-needed,--gc-sections,--unresolved-symbols=ignore-in-shared-libs
+    mmcv_plugin
+    ${TensorRT_LIBRARIES}
+    ${OpenCV_LIBS}
+)
+set_target_properties(engine PROPERTIES CUDA_ARCHITECTURES "61")
+
+add_library(utils SHARED
+    src_mod/utils/preprocess.cu
+    src_mod/utils/draw.cpp
+)
+target_link_libraries(utils PUBLIC ${OpenCV_LIBS})
+set_target_properties(utils PROPERTIES CUDA_ARCHITECTURES "61")
+
+
+# add_executable(build
+#     build_mod.cu
+#     ${TensorRT_SAMPLE_DIR}/common/logger.cpp
+#     # ${TensorRT_SAMPLE_DIR}/common/sampleUtils.h
+# )
+# target_include_directories(build PRIVATE ${TensorRT_INCLUDE_DIRS} ${TensorRT_SAMPLE_DIR}/common)
+# target_link_libraries(build
+#     PRIVATE
+#     -Wl,--no-as-needed,--gc-sections,--unresolved-symbols=ignore-in-shared-libs
+#     mmcv_plugin
+#     gflags
+#     utils
+#     Threads::Threads
+#     ${OpenCV_LIBS}
+#     ${TensorRT_LIBRARIES}
+#     )
+# set_target_properties(build PROPERTIES CUDA_ARCHITECTURES "61")
+
+
+add_library(algo SHARED
+    src_mod/smoke.cpp
+)
+target_link_libraries(algo engine utils cuda cudart  ${OpenCV_LIBS})
+
+
+add_executable(smoke_img_test
+    smoke_signal_test_v7.cpp
+)
+target_link_libraries(smoke_img_test utils algo Threads::Threads gflags)
+
+add_executable(smoke_test
+    smoke_test.cpp
+)
+target_link_libraries(smoke_test utils algo Threads::Threads gflags)
