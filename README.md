@@ -44,3 +44,6 @@ Same as above
 | ----------------- | --------------------------- |
 | Summary           | 25 ms                 |
 ```
+
+## Note 
+Please contact me about smoke adaptive resolution detection theory
