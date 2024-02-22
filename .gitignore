@@ -2,4 +2,6 @@ samples/
 output/
 media/*.avi
 tools/
-weights/
+weights/*.engine
+weights/smoke_dla34_mod.onnx
+
