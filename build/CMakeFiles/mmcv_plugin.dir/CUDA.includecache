@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/app/TensorRT/smoke_bushu/src_modv2/common_cuda_helper.h
+/app/TensorRT/smoke_bushu/src_v7/plugin/common_cuda_helper.hpp
 cublas_v2.h
 -
 cuda.h
@@ -16,35 +16,49 @@ stdio.h
 algorithm
 -
 
-/app/TensorRT/smoke_bushu/src_modv2/modulated_deform_conv/modulated_deform_conv_cuda.h
+/app/TensorRT/smoke_bushu/src_v7/plugin/modulated_deform_conv/common_cuda_helper.cuh
+cublas_v2.h
+-
+cuda.h
+-
+algorithm
+-
+
+/app/TensorRT/smoke_bushu/src_v7/plugin/modulated_deform_conv/modulated_deform_conv_cuda.cuh
 cuda_fp16.h
 -
 float.h
 -
-common_cuda_helper.h
-/app/TensorRT/smoke_bushu/src_modv2/modulated_deform_conv/common_cuda_helper.h
+common_cuda_helper.cuh
+/app/TensorRT/smoke_bushu/src_v7/plugin/modulated_deform_conv/common_cuda_helper.cuh
 
-/app/TensorRT/smoke_bushu/src_modv2/trt_modulated_deform_conv_kernel.cu
+/app/TensorRT/smoke_bushu/src_v7/plugin/trt_cuda_helper.cu
+common_cuda_helper.hpp
+/app/TensorRT/smoke_bushu/src_v7/plugin/common_cuda_helper.hpp
+trt_plugin_helper.hpp
+/app/TensorRT/smoke_bushu/src_v7/plugin/trt_plugin_helper.hpp
+
+/app/TensorRT/smoke_bushu/src_v7/plugin/trt_modulated_deform_conv_kernel.cu
 assert.h
 -
 cuda_fp16.h
 -
-common_cuda_helper.h
-/app/TensorRT/smoke_bushu/src_modv2/common_cuda_helper.h
-modulated_deform_conv/modulated_deform_conv_cuda.h
-/app/TensorRT/smoke_bushu/src_modv2/modulated_deform_conv/modulated_deform_conv_cuda.h
-trt_modulated_deform_conv_kernel.h
-/app/TensorRT/smoke_bushu/src_modv2/trt_modulated_deform_conv_kernel.h
-trt_plugin_helper.h
-/app/TensorRT/smoke_bushu/src_modv2/trt_plugin_helper.h
+common_cuda_helper.hpp
+/app/TensorRT/smoke_bushu/src_v7/plugin/common_cuda_helper.hpp
+modulated_deform_conv/modulated_deform_conv_cuda.cuh
+/app/TensorRT/smoke_bushu/src_v7/plugin/modulated_deform_conv/modulated_deform_conv_cuda.cuh
+trt_modulated_deform_conv_kernel.hpp
+/app/TensorRT/smoke_bushu/src_v7/plugin/trt_modulated_deform_conv_kernel.hpp
+trt_plugin_helper.hpp
+/app/TensorRT/smoke_bushu/src_v7/plugin/trt_plugin_helper.hpp
 
-/app/TensorRT/smoke_bushu/src_modv2/trt_modulated_deform_conv_kernel.h
+/app/TensorRT/smoke_bushu/src_v7/plugin/trt_modulated_deform_conv_kernel.hpp
 cublas_v2.h
 -
 cuda_runtime.h
 -
 
-/app/TensorRT/smoke_bushu/src_modv2/trt_plugin_helper.h
+/app/TensorRT/smoke_bushu/src_v7/plugin/trt_plugin_helper.hpp
 cudnn.h
 -
 iostream
@@ -52,7 +66,7 @@ iostream
 stdexcept
 -
 NvInferRuntime.h
-/app/TensorRT/smoke_bushu/src_modv2/NvInferRuntime.h
+/app/TensorRT/smoke_bushu/src_v7/plugin/NvInferRuntime.h
 
 /usr/local/cuda/include/builtin_types.h
 device_types.h

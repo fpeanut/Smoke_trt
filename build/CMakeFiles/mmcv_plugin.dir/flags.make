@@ -7,11 +7,11 @@ CUDA_FLAGS = -Xcompiler=-fPIC   -std=c++14
 
 CUDA_DEFINES = -Dmmcv_plugin_EXPORTS
 
-CUDA_INCLUDES = -I/usr/include/opencv -I/usr/local/cuda/include -I/app/TensorRT/smoke_bushu/src_modv2 
+CUDA_INCLUDES = -I/usr/include/opencv -I/usr/local/cuda/include -I/app/TensorRT/smoke_bushu/src_v7 -I/app/TensorRT/smoke_bushu/src_v7/common 
 
 CXX_FLAGS = -fPIC   -std=gnu++14
 
 CXX_DEFINES = -Dmmcv_plugin_EXPORTS
 
-CXX_INCLUDES = -I/usr/include/opencv -I/usr/local/cuda/include -I/app/TensorRT/smoke_bushu/src_modv2 
+CXX_INCLUDES = -I/usr/include/opencv -I/usr/local/cuda/include -I/app/TensorRT/smoke_bushu/src_v7 -I/app/TensorRT/smoke_bushu/src_v7/common 
 

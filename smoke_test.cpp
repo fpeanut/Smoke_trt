@@ -1,9 +1,9 @@
 #include <iostream>
-
 #include "gflags/gflags.h"
 #include "utils/preprocess.h"
 #include "smoke.h"
 #include "utils/draw.h"
+#include<chrono>
 
 
 DEFINE_string(smoke, "smoke-sim.engine", "facenet model path");
@@ -89,12 +89,12 @@ int main(int argc, char **argv)
     trans_mat=_get_transform_matrix(center,scale,out_scale/FLAGS_down_scale);//下采样仿射变换矩阵
     
 
-    apollo::perception::camera::smoke::SMOKE smoke(smoke_path,trans_mat); // 实例化engine
+    smoke::SMOKE smoke(smoke_path,trans_mat); // 实例化engine
 
     // 检查大小
-    if (width != apollo::perception::camera::smoke::kInputW || height != apollo::perception::camera::smoke::kInputH)
+    if (width != smoke::kInputW || height != smoke::kInputH)
     {
-        std::cout << "input video size must be " << apollo::perception::camera::smoke::kInputW << "x" << apollo::perception::camera::smoke::kInputH << std::endl;
+        std::cout << "input video size must be " << smoke::kInputW << "x" << smoke::kInputH << std::endl;
         // scale_mat= (cv::Mat_<double>(2, 3) <<  0.8, 0, 0, 0,  0.8, -168);
         // return -1;
     }

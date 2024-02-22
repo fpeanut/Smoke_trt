@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/app/TensorRT/smoke_bushu/src_v7/utils/draw.cpp
+draw.h
+/app/TensorRT/smoke_bushu/src_v7/utils/draw.h
+
+/app/TensorRT/smoke_bushu/src_v7/utils/draw.h
+opencv2/opencv.hpp
+-
+

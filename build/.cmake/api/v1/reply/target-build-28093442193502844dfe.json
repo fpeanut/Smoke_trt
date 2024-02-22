@@ -1,0 +1,209 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "build"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"include_directories",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 59,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 16,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 64,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 12,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "  -std=c++14"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/usr/local/cuda/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/app/TensorRT/smoke_bushu/src_v7"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/app/TensorRT/smoke_bushu/src_v7/common"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/usr/src/tensorrt/samples/common"
+				},
+				{
+					"backtrace" : 7,
+					"isSystem" : true,
+					"path" : "/usr/include/opencv"
+				}
+			],
+			"language" : "CUDA",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "  -std=gnu++14"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/usr/local/cuda/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/app/TensorRT/smoke_bushu/src_v7"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/app/TensorRT/smoke_bushu/src_v7/common"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/usr/src/tensorrt/samples/common"
+				},
+				{
+					"backtrace" : 7,
+					"isSystem" : true,
+					"path" : "/usr/include/opencv"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "mmcv_plugin::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "utils::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "build::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-L/usr/local/cuda/lib64  -L/usr/local/cuda/targets/x86_64-linux/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/usr/local/cuda/lib64:/app/TensorRT/smoke_bushu/build -Wl,--no-as-needed,--gc-sections,--unresolved-symbols=ignore-in-shared-libs libmmcv_plugin.so -lgflags libutils.so /usr/lib/x86_64-linux-gnu/libopencv_shape.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_superres.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_aruco.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_bgsegm.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_bioinspired.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_ccalib.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_datasets.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_dpm.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_face.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_freetype.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_fuzzy.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_hdf.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_line_descriptor.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_optflow.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_plot.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_reg.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_saliency.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_stereo.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_structured_light.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_surface_matching.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_text.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_ximgproc.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.3.2.0 /usr/lib/x86_64-linux-gnu/libnvinfer.so /usr/lib/x86_64-linux-gnu/libnvinfer_plugin.so /usr/lib/x86_64-linux-gnu/libnvparsers.so /usr/lib/x86_64-linux-gnu/libnvonnxparser.so -Wl,--no-as-needed,--gc-sections,--unresolved-symbols=ignore-in-shared-libs -lcublas /usr/lib/x86_64-linux-gnu/libnvinfer.so /usr/lib/x86_64-linux-gnu/libnvinfer_plugin.so /usr/lib/x86_64-linux-gnu/libnvparsers.so /usr/lib/x86_64-linux-gnu/libnvonnxparser.so /usr/lib/x86_64-linux-gnu/libopencv_video.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_viz.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_phase_unwrapping.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_rgbd.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_flann.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_ml.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_photo.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_videoio.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0 -lpthread -lcudadevrt -lcudart_static -lrt -lpthread -ldl",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "build",
+	"nameOnDisk" : "build",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build_v7.cu",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "/usr/src/tensorrt/samples/common/logger.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

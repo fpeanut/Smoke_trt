@@ -1,0 +1,113 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TensorRT_MODNet",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "algo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-algo-7cbe9c0aaa31abebd709.json",
+					"name" : "algo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "build::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-build-28093442193502844dfe.json",
+					"name" : "build",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "engine::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-engine-e1545ba8a78f75885b7c.json",
+					"name" : "engine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mmcv_plugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mmcv_plugin-bcb2656d4988070efcdd.json",
+					"name" : "mmcv_plugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "smoke_img_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-smoke_img_test-ddab0dd5e13d719afc1f.json",
+					"name" : "smoke_img_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "smoke_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-smoke_test-c4f4fd702fc081b1ba6c.json",
+					"name" : "smoke_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "utils::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-utils-5bfed44e62694661aaa7.json",
+					"name" : "utils",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/app/TensorRT/smoke_bushu/build",
+		"source" : "/app/TensorRT/smoke_bushu"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

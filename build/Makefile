@@ -111,30 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main_video
+# Target rules for targets named smoke_test
 
 # Build rule for target.
-main_video: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main_video
-.PHONY : main_video
+smoke_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 smoke_test
+.PHONY : smoke_test
 
 # fast build rule for target.
-main_video/fast:
-	$(MAKE) -f CMakeFiles/main_video.dir/build.make CMakeFiles/main_video.dir/build
-.PHONY : main_video/fast
+smoke_test/fast:
+	$(MAKE) -f CMakeFiles/smoke_test.dir/build.make CMakeFiles/smoke_test.dir/build
+.PHONY : smoke_test/fast
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named engine
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+engine: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 engine
+.PHONY : engine
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+engine/fast:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/build
+.PHONY : engine/fast
 
 #=============================================================================
 # Target rules for targets named mmcv_plugin
@@ -150,206 +150,380 @@ mmcv_plugin/fast:
 .PHONY : mmcv_plugin/fast
 
 #=============================================================================
-# Target rules for targets named smoke
+# Target rules for targets named utils
 
 # Build rule for target.
-smoke: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 smoke
-.PHONY : smoke
+utils: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 utils
+.PHONY : utils
 
 # fast build rule for target.
-smoke/fast:
-	$(MAKE) -f CMakeFiles/smoke.dir/build.make CMakeFiles/smoke.dir/build
-.PHONY : smoke/fast
+utils/fast:
+	$(MAKE) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/build
+.PHONY : utils/fast
 
-src_modv2/main.o: src_modv2/main.cc.o
+#=============================================================================
+# Target rules for targets named algo
 
-.PHONY : src_modv2/main.o
+# Build rule for target.
+algo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 algo
+.PHONY : algo
 
-# target to build an object file
-src_modv2/main.cc.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src_modv2/main.cc.o
-.PHONY : src_modv2/main.cc.o
+# fast build rule for target.
+algo/fast:
+	$(MAKE) -f CMakeFiles/algo.dir/build.make CMakeFiles/algo.dir/build
+.PHONY : algo/fast
 
-src_modv2/main.i: src_modv2/main.cc.i
+#=============================================================================
+# Target rules for targets named build
 
-.PHONY : src_modv2/main.i
+# Build rule for target.
+build: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 build
+.PHONY : build
 
-# target to preprocess a source file
-src_modv2/main.cc.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src_modv2/main.cc.i
-.PHONY : src_modv2/main.cc.i
+# fast build rule for target.
+build/fast:
+	$(MAKE) -f CMakeFiles/build.dir/build.make CMakeFiles/build.dir/build
+.PHONY : build/fast
 
-src_modv2/main.s: src_modv2/main.cc.s
+#=============================================================================
+# Target rules for targets named smoke_img_test
 
-.PHONY : src_modv2/main.s
+# Build rule for target.
+smoke_img_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 smoke_img_test
+.PHONY : smoke_img_test
 
-# target to generate assembly for a file
-src_modv2/main.cc.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src_modv2/main.cc.s
-.PHONY : src_modv2/main.cc.s
+# fast build rule for target.
+smoke_img_test/fast:
+	$(MAKE) -f CMakeFiles/smoke_img_test.dir/build.make CMakeFiles/smoke_img_test.dir/build
+.PHONY : smoke_img_test/fast
 
-src_modv2/main_video.o: src_modv2/main_video.cc.o
+build_v7.o: build_v7.cu.o
 
-.PHONY : src_modv2/main_video.o
-
-# target to build an object file
-src_modv2/main_video.cc.o:
-	$(MAKE) -f CMakeFiles/main_video.dir/build.make CMakeFiles/main_video.dir/src_modv2/main_video.cc.o
-.PHONY : src_modv2/main_video.cc.o
-
-src_modv2/main_video.i: src_modv2/main_video.cc.i
-
-.PHONY : src_modv2/main_video.i
-
-# target to preprocess a source file
-src_modv2/main_video.cc.i:
-	$(MAKE) -f CMakeFiles/main_video.dir/build.make CMakeFiles/main_video.dir/src_modv2/main_video.cc.i
-.PHONY : src_modv2/main_video.cc.i
-
-src_modv2/main_video.s: src_modv2/main_video.cc.s
-
-.PHONY : src_modv2/main_video.s
-
-# target to generate assembly for a file
-src_modv2/main_video.cc.s:
-	$(MAKE) -f CMakeFiles/main_video.dir/build.make CMakeFiles/main_video.dir/src_modv2/main_video.cc.s
-.PHONY : src_modv2/main_video.cc.s
-
-src_modv2/preprocess.o: src_modv2/preprocess.cu.o
-
-.PHONY : src_modv2/preprocess.o
+.PHONY : build_v7.o
 
 # target to build an object file
-src_modv2/preprocess.cu.o:
-	$(MAKE) -f CMakeFiles/smoke.dir/build.make CMakeFiles/smoke.dir/src_modv2/preprocess.cu.o
-.PHONY : src_modv2/preprocess.cu.o
+build_v7.cu.o:
+	$(MAKE) -f CMakeFiles/build.dir/build.make CMakeFiles/build.dir/build_v7.cu.o
+.PHONY : build_v7.cu.o
 
-src_modv2/preprocess.i: src_modv2/preprocess.cu.i
+build_v7.i: build_v7.cu.i
 
-.PHONY : src_modv2/preprocess.i
+.PHONY : build_v7.i
 
 # target to preprocess a source file
-src_modv2/preprocess.cu.i:
-	$(MAKE) -f CMakeFiles/smoke.dir/build.make CMakeFiles/smoke.dir/src_modv2/preprocess.cu.i
-.PHONY : src_modv2/preprocess.cu.i
+build_v7.cu.i:
+	$(MAKE) -f CMakeFiles/build.dir/build.make CMakeFiles/build.dir/build_v7.cu.i
+.PHONY : build_v7.cu.i
 
-src_modv2/preprocess.s: src_modv2/preprocess.cu.s
+build_v7.s: build_v7.cu.s
 
-.PHONY : src_modv2/preprocess.s
+.PHONY : build_v7.s
 
 # target to generate assembly for a file
-src_modv2/preprocess.cu.s:
-	$(MAKE) -f CMakeFiles/smoke.dir/build.make CMakeFiles/smoke.dir/src_modv2/preprocess.cu.s
-.PHONY : src_modv2/preprocess.cu.s
+build_v7.cu.s:
+	$(MAKE) -f CMakeFiles/build.dir/build.make CMakeFiles/build.dir/build_v7.cu.s
+.PHONY : build_v7.cu.s
 
-src_modv2/smoke.o: src_modv2/smoke.cc.o
+smoke_signal_test_v7.o: smoke_signal_test_v7.cpp.o
 
-.PHONY : src_modv2/smoke.o
+.PHONY : smoke_signal_test_v7.o
 
 # target to build an object file
-src_modv2/smoke.cc.o:
-	$(MAKE) -f CMakeFiles/smoke.dir/build.make CMakeFiles/smoke.dir/src_modv2/smoke.cc.o
-.PHONY : src_modv2/smoke.cc.o
+smoke_signal_test_v7.cpp.o:
+	$(MAKE) -f CMakeFiles/smoke_img_test.dir/build.make CMakeFiles/smoke_img_test.dir/smoke_signal_test_v7.cpp.o
+.PHONY : smoke_signal_test_v7.cpp.o
 
-src_modv2/smoke.i: src_modv2/smoke.cc.i
+smoke_signal_test_v7.i: smoke_signal_test_v7.cpp.i
 
-.PHONY : src_modv2/smoke.i
+.PHONY : smoke_signal_test_v7.i
 
 # target to preprocess a source file
-src_modv2/smoke.cc.i:
-	$(MAKE) -f CMakeFiles/smoke.dir/build.make CMakeFiles/smoke.dir/src_modv2/smoke.cc.i
-.PHONY : src_modv2/smoke.cc.i
+smoke_signal_test_v7.cpp.i:
+	$(MAKE) -f CMakeFiles/smoke_img_test.dir/build.make CMakeFiles/smoke_img_test.dir/smoke_signal_test_v7.cpp.i
+.PHONY : smoke_signal_test_v7.cpp.i
 
-src_modv2/smoke.s: src_modv2/smoke.cc.s
+smoke_signal_test_v7.s: smoke_signal_test_v7.cpp.s
 
-.PHONY : src_modv2/smoke.s
+.PHONY : smoke_signal_test_v7.s
 
 # target to generate assembly for a file
-src_modv2/smoke.cc.s:
-	$(MAKE) -f CMakeFiles/smoke.dir/build.make CMakeFiles/smoke.dir/src_modv2/smoke.cc.s
-.PHONY : src_modv2/smoke.cc.s
+smoke_signal_test_v7.cpp.s:
+	$(MAKE) -f CMakeFiles/smoke_img_test.dir/build.make CMakeFiles/smoke_img_test.dir/smoke_signal_test_v7.cpp.s
+.PHONY : smoke_signal_test_v7.cpp.s
 
-src_modv2/trt_cuda_helper.o: src_modv2/trt_cuda_helper.cu.o
+smoke_test.o: smoke_test.cpp.o
 
-.PHONY : src_modv2/trt_cuda_helper.o
+.PHONY : smoke_test.o
 
 # target to build an object file
-src_modv2/trt_cuda_helper.cu.o:
-	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_modv2/trt_cuda_helper.cu.o
-.PHONY : src_modv2/trt_cuda_helper.cu.o
+smoke_test.cpp.o:
+	$(MAKE) -f CMakeFiles/smoke_test.dir/build.make CMakeFiles/smoke_test.dir/smoke_test.cpp.o
+.PHONY : smoke_test.cpp.o
 
-src_modv2/trt_cuda_helper.i: src_modv2/trt_cuda_helper.cu.i
+smoke_test.i: smoke_test.cpp.i
 
-.PHONY : src_modv2/trt_cuda_helper.i
+.PHONY : smoke_test.i
 
 # target to preprocess a source file
-src_modv2/trt_cuda_helper.cu.i:
-	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_modv2/trt_cuda_helper.cu.i
-.PHONY : src_modv2/trt_cuda_helper.cu.i
+smoke_test.cpp.i:
+	$(MAKE) -f CMakeFiles/smoke_test.dir/build.make CMakeFiles/smoke_test.dir/smoke_test.cpp.i
+.PHONY : smoke_test.cpp.i
 
-src_modv2/trt_cuda_helper.s: src_modv2/trt_cuda_helper.cu.s
+smoke_test.s: smoke_test.cpp.s
 
-.PHONY : src_modv2/trt_cuda_helper.s
+.PHONY : smoke_test.s
 
 # target to generate assembly for a file
-src_modv2/trt_cuda_helper.cu.s:
-	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_modv2/trt_cuda_helper.cu.s
-.PHONY : src_modv2/trt_cuda_helper.cu.s
+smoke_test.cpp.s:
+	$(MAKE) -f CMakeFiles/smoke_test.dir/build.make CMakeFiles/smoke_test.dir/smoke_test.cpp.s
+.PHONY : smoke_test.cpp.s
 
-src_modv2/trt_modulated_deform_conv.o: src_modv2/trt_modulated_deform_conv.cpp.o
+src_v7/common/logger.o: src_v7/common/logger.cpp.o
 
-.PHONY : src_modv2/trt_modulated_deform_conv.o
+.PHONY : src_v7/common/logger.o
 
 # target to build an object file
-src_modv2/trt_modulated_deform_conv.cpp.o:
-	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_modv2/trt_modulated_deform_conv.cpp.o
-.PHONY : src_modv2/trt_modulated_deform_conv.cpp.o
+src_v7/common/logger.cpp.o:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src_v7/common/logger.cpp.o
+.PHONY : src_v7/common/logger.cpp.o
 
-src_modv2/trt_modulated_deform_conv.i: src_modv2/trt_modulated_deform_conv.cpp.i
+src_v7/common/logger.i: src_v7/common/logger.cpp.i
 
-.PHONY : src_modv2/trt_modulated_deform_conv.i
+.PHONY : src_v7/common/logger.i
 
 # target to preprocess a source file
-src_modv2/trt_modulated_deform_conv.cpp.i:
-	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_modv2/trt_modulated_deform_conv.cpp.i
-.PHONY : src_modv2/trt_modulated_deform_conv.cpp.i
+src_v7/common/logger.cpp.i:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src_v7/common/logger.cpp.i
+.PHONY : src_v7/common/logger.cpp.i
 
-src_modv2/trt_modulated_deform_conv.s: src_modv2/trt_modulated_deform_conv.cpp.s
+src_v7/common/logger.s: src_v7/common/logger.cpp.s
 
-.PHONY : src_modv2/trt_modulated_deform_conv.s
+.PHONY : src_v7/common/logger.s
 
 # target to generate assembly for a file
-src_modv2/trt_modulated_deform_conv.cpp.s:
-	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_modv2/trt_modulated_deform_conv.cpp.s
-.PHONY : src_modv2/trt_modulated_deform_conv.cpp.s
+src_v7/common/logger.cpp.s:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src_v7/common/logger.cpp.s
+.PHONY : src_v7/common/logger.cpp.s
 
-src_modv2/trt_modulated_deform_conv_kernel.o: src_modv2/trt_modulated_deform_conv_kernel.cu.o
+src_v7/engine.o: src_v7/engine.cu.o
 
-.PHONY : src_modv2/trt_modulated_deform_conv_kernel.o
+.PHONY : src_v7/engine.o
 
 # target to build an object file
-src_modv2/trt_modulated_deform_conv_kernel.cu.o:
-	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_modv2/trt_modulated_deform_conv_kernel.cu.o
-.PHONY : src_modv2/trt_modulated_deform_conv_kernel.cu.o
+src_v7/engine.cu.o:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src_v7/engine.cu.o
+.PHONY : src_v7/engine.cu.o
 
-src_modv2/trt_modulated_deform_conv_kernel.i: src_modv2/trt_modulated_deform_conv_kernel.cu.i
+src_v7/engine.i: src_v7/engine.cu.i
 
-.PHONY : src_modv2/trt_modulated_deform_conv_kernel.i
+.PHONY : src_v7/engine.i
 
 # target to preprocess a source file
-src_modv2/trt_modulated_deform_conv_kernel.cu.i:
-	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_modv2/trt_modulated_deform_conv_kernel.cu.i
-.PHONY : src_modv2/trt_modulated_deform_conv_kernel.cu.i
+src_v7/engine.cu.i:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src_v7/engine.cu.i
+.PHONY : src_v7/engine.cu.i
 
-src_modv2/trt_modulated_deform_conv_kernel.s: src_modv2/trt_modulated_deform_conv_kernel.cu.s
+src_v7/engine.s: src_v7/engine.cu.s
 
-.PHONY : src_modv2/trt_modulated_deform_conv_kernel.s
+.PHONY : src_v7/engine.s
 
 # target to generate assembly for a file
-src_modv2/trt_modulated_deform_conv_kernel.cu.s:
-	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_modv2/trt_modulated_deform_conv_kernel.cu.s
-.PHONY : src_modv2/trt_modulated_deform_conv_kernel.cu.s
+src_v7/engine.cu.s:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src_v7/engine.cu.s
+.PHONY : src_v7/engine.cu.s
+
+src_v7/plugin/trt_cuda_helper.o: src_v7/plugin/trt_cuda_helper.cu.o
+
+.PHONY : src_v7/plugin/trt_cuda_helper.o
+
+# target to build an object file
+src_v7/plugin/trt_cuda_helper.cu.o:
+	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_cuda_helper.cu.o
+.PHONY : src_v7/plugin/trt_cuda_helper.cu.o
+
+src_v7/plugin/trt_cuda_helper.i: src_v7/plugin/trt_cuda_helper.cu.i
+
+.PHONY : src_v7/plugin/trt_cuda_helper.i
+
+# target to preprocess a source file
+src_v7/plugin/trt_cuda_helper.cu.i:
+	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_cuda_helper.cu.i
+.PHONY : src_v7/plugin/trt_cuda_helper.cu.i
+
+src_v7/plugin/trt_cuda_helper.s: src_v7/plugin/trt_cuda_helper.cu.s
+
+.PHONY : src_v7/plugin/trt_cuda_helper.s
+
+# target to generate assembly for a file
+src_v7/plugin/trt_cuda_helper.cu.s:
+	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_cuda_helper.cu.s
+.PHONY : src_v7/plugin/trt_cuda_helper.cu.s
+
+src_v7/plugin/trt_modulated_deform_conv.o: src_v7/plugin/trt_modulated_deform_conv.cpp.o
+
+.PHONY : src_v7/plugin/trt_modulated_deform_conv.o
+
+# target to build an object file
+src_v7/plugin/trt_modulated_deform_conv.cpp.o:
+	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_modulated_deform_conv.cpp.o
+.PHONY : src_v7/plugin/trt_modulated_deform_conv.cpp.o
+
+src_v7/plugin/trt_modulated_deform_conv.i: src_v7/plugin/trt_modulated_deform_conv.cpp.i
+
+.PHONY : src_v7/plugin/trt_modulated_deform_conv.i
+
+# target to preprocess a source file
+src_v7/plugin/trt_modulated_deform_conv.cpp.i:
+	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_modulated_deform_conv.cpp.i
+.PHONY : src_v7/plugin/trt_modulated_deform_conv.cpp.i
+
+src_v7/plugin/trt_modulated_deform_conv.s: src_v7/plugin/trt_modulated_deform_conv.cpp.s
+
+.PHONY : src_v7/plugin/trt_modulated_deform_conv.s
+
+# target to generate assembly for a file
+src_v7/plugin/trt_modulated_deform_conv.cpp.s:
+	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_modulated_deform_conv.cpp.s
+.PHONY : src_v7/plugin/trt_modulated_deform_conv.cpp.s
+
+src_v7/plugin/trt_modulated_deform_conv_kernel.o: src_v7/plugin/trt_modulated_deform_conv_kernel.cu.o
+
+.PHONY : src_v7/plugin/trt_modulated_deform_conv_kernel.o
+
+# target to build an object file
+src_v7/plugin/trt_modulated_deform_conv_kernel.cu.o:
+	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_modulated_deform_conv_kernel.cu.o
+.PHONY : src_v7/plugin/trt_modulated_deform_conv_kernel.cu.o
+
+src_v7/plugin/trt_modulated_deform_conv_kernel.i: src_v7/plugin/trt_modulated_deform_conv_kernel.cu.i
+
+.PHONY : src_v7/plugin/trt_modulated_deform_conv_kernel.i
+
+# target to preprocess a source file
+src_v7/plugin/trt_modulated_deform_conv_kernel.cu.i:
+	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_modulated_deform_conv_kernel.cu.i
+.PHONY : src_v7/plugin/trt_modulated_deform_conv_kernel.cu.i
+
+src_v7/plugin/trt_modulated_deform_conv_kernel.s: src_v7/plugin/trt_modulated_deform_conv_kernel.cu.s
+
+.PHONY : src_v7/plugin/trt_modulated_deform_conv_kernel.s
+
+# target to generate assembly for a file
+src_v7/plugin/trt_modulated_deform_conv_kernel.cu.s:
+	$(MAKE) -f CMakeFiles/mmcv_plugin.dir/build.make CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_modulated_deform_conv_kernel.cu.s
+.PHONY : src_v7/plugin/trt_modulated_deform_conv_kernel.cu.s
+
+src_v7/smoke.o: src_v7/smoke.cpp.o
+
+.PHONY : src_v7/smoke.o
+
+# target to build an object file
+src_v7/smoke.cpp.o:
+	$(MAKE) -f CMakeFiles/algo.dir/build.make CMakeFiles/algo.dir/src_v7/smoke.cpp.o
+.PHONY : src_v7/smoke.cpp.o
+
+src_v7/smoke.i: src_v7/smoke.cpp.i
+
+.PHONY : src_v7/smoke.i
+
+# target to preprocess a source file
+src_v7/smoke.cpp.i:
+	$(MAKE) -f CMakeFiles/algo.dir/build.make CMakeFiles/algo.dir/src_v7/smoke.cpp.i
+.PHONY : src_v7/smoke.cpp.i
+
+src_v7/smoke.s: src_v7/smoke.cpp.s
+
+.PHONY : src_v7/smoke.s
+
+# target to generate assembly for a file
+src_v7/smoke.cpp.s:
+	$(MAKE) -f CMakeFiles/algo.dir/build.make CMakeFiles/algo.dir/src_v7/smoke.cpp.s
+.PHONY : src_v7/smoke.cpp.s
+
+src_v7/utils/draw.o: src_v7/utils/draw.cpp.o
+
+.PHONY : src_v7/utils/draw.o
+
+# target to build an object file
+src_v7/utils/draw.cpp.o:
+	$(MAKE) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src_v7/utils/draw.cpp.o
+.PHONY : src_v7/utils/draw.cpp.o
+
+src_v7/utils/draw.i: src_v7/utils/draw.cpp.i
+
+.PHONY : src_v7/utils/draw.i
+
+# target to preprocess a source file
+src_v7/utils/draw.cpp.i:
+	$(MAKE) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src_v7/utils/draw.cpp.i
+.PHONY : src_v7/utils/draw.cpp.i
+
+src_v7/utils/draw.s: src_v7/utils/draw.cpp.s
+
+.PHONY : src_v7/utils/draw.s
+
+# target to generate assembly for a file
+src_v7/utils/draw.cpp.s:
+	$(MAKE) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src_v7/utils/draw.cpp.s
+.PHONY : src_v7/utils/draw.cpp.s
+
+src_v7/utils/preprocess.o: src_v7/utils/preprocess.cu.o
+
+.PHONY : src_v7/utils/preprocess.o
+
+# target to build an object file
+src_v7/utils/preprocess.cu.o:
+	$(MAKE) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src_v7/utils/preprocess.cu.o
+.PHONY : src_v7/utils/preprocess.cu.o
+
+src_v7/utils/preprocess.i: src_v7/utils/preprocess.cu.i
+
+.PHONY : src_v7/utils/preprocess.i
+
+# target to preprocess a source file
+src_v7/utils/preprocess.cu.i:
+	$(MAKE) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src_v7/utils/preprocess.cu.i
+.PHONY : src_v7/utils/preprocess.cu.i
+
+src_v7/utils/preprocess.s: src_v7/utils/preprocess.cu.s
+
+.PHONY : src_v7/utils/preprocess.s
+
+# target to generate assembly for a file
+src_v7/utils/preprocess.cu.s:
+	$(MAKE) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src_v7/utils/preprocess.cu.s
+.PHONY : src_v7/utils/preprocess.cu.s
+
+usr/src/tensorrt/samples/common/logger.o: usr/src/tensorrt/samples/common/logger.cpp.o
+
+.PHONY : usr/src/tensorrt/samples/common/logger.o
+
+# target to build an object file
+usr/src/tensorrt/samples/common/logger.cpp.o:
+	$(MAKE) -f CMakeFiles/build.dir/build.make CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.o
+.PHONY : usr/src/tensorrt/samples/common/logger.cpp.o
+
+usr/src/tensorrt/samples/common/logger.i: usr/src/tensorrt/samples/common/logger.cpp.i
+
+.PHONY : usr/src/tensorrt/samples/common/logger.i
+
+# target to preprocess a source file
+usr/src/tensorrt/samples/common/logger.cpp.i:
+	$(MAKE) -f CMakeFiles/build.dir/build.make CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.i
+.PHONY : usr/src/tensorrt/samples/common/logger.cpp.i
+
+usr/src/tensorrt/samples/common/logger.s: usr/src/tensorrt/samples/common/logger.cpp.s
+
+.PHONY : usr/src/tensorrt/samples/common/logger.s
+
+# target to generate assembly for a file
+usr/src/tensorrt/samples/common/logger.cpp.s:
+	$(MAKE) -f CMakeFiles/build.dir/build.make CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.s
+.PHONY : usr/src/tensorrt/samples/common/logger.cpp.s
 
 # Help Target
 help:
@@ -358,32 +532,50 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... main_video"
 	@echo "... edit_cache"
-	@echo "... main"
+	@echo "... smoke_test"
+	@echo "... engine"
 	@echo "... mmcv_plugin"
-	@echo "... smoke"
-	@echo "... src_modv2/main.o"
-	@echo "... src_modv2/main.i"
-	@echo "... src_modv2/main.s"
-	@echo "... src_modv2/main_video.o"
-	@echo "... src_modv2/main_video.i"
-	@echo "... src_modv2/main_video.s"
-	@echo "... src_modv2/preprocess.o"
-	@echo "... src_modv2/preprocess.i"
-	@echo "... src_modv2/preprocess.s"
-	@echo "... src_modv2/smoke.o"
-	@echo "... src_modv2/smoke.i"
-	@echo "... src_modv2/smoke.s"
-	@echo "... src_modv2/trt_cuda_helper.o"
-	@echo "... src_modv2/trt_cuda_helper.i"
-	@echo "... src_modv2/trt_cuda_helper.s"
-	@echo "... src_modv2/trt_modulated_deform_conv.o"
-	@echo "... src_modv2/trt_modulated_deform_conv.i"
-	@echo "... src_modv2/trt_modulated_deform_conv.s"
-	@echo "... src_modv2/trt_modulated_deform_conv_kernel.o"
-	@echo "... src_modv2/trt_modulated_deform_conv_kernel.i"
-	@echo "... src_modv2/trt_modulated_deform_conv_kernel.s"
+	@echo "... utils"
+	@echo "... algo"
+	@echo "... build"
+	@echo "... smoke_img_test"
+	@echo "... build_v7.o"
+	@echo "... build_v7.i"
+	@echo "... build_v7.s"
+	@echo "... smoke_signal_test_v7.o"
+	@echo "... smoke_signal_test_v7.i"
+	@echo "... smoke_signal_test_v7.s"
+	@echo "... smoke_test.o"
+	@echo "... smoke_test.i"
+	@echo "... smoke_test.s"
+	@echo "... src_v7/common/logger.o"
+	@echo "... src_v7/common/logger.i"
+	@echo "... src_v7/common/logger.s"
+	@echo "... src_v7/engine.o"
+	@echo "... src_v7/engine.i"
+	@echo "... src_v7/engine.s"
+	@echo "... src_v7/plugin/trt_cuda_helper.o"
+	@echo "... src_v7/plugin/trt_cuda_helper.i"
+	@echo "... src_v7/plugin/trt_cuda_helper.s"
+	@echo "... src_v7/plugin/trt_modulated_deform_conv.o"
+	@echo "... src_v7/plugin/trt_modulated_deform_conv.i"
+	@echo "... src_v7/plugin/trt_modulated_deform_conv.s"
+	@echo "... src_v7/plugin/trt_modulated_deform_conv_kernel.o"
+	@echo "... src_v7/plugin/trt_modulated_deform_conv_kernel.i"
+	@echo "... src_v7/plugin/trt_modulated_deform_conv_kernel.s"
+	@echo "... src_v7/smoke.o"
+	@echo "... src_v7/smoke.i"
+	@echo "... src_v7/smoke.s"
+	@echo "... src_v7/utils/draw.o"
+	@echo "... src_v7/utils/draw.i"
+	@echo "... src_v7/utils/draw.s"
+	@echo "... src_v7/utils/preprocess.o"
+	@echo "... src_v7/utils/preprocess.i"
+	@echo "... src_v7/utils/preprocess.s"
+	@echo "... usr/src/tensorrt/samples/common/logger.o"
+	@echo "... usr/src/tensorrt/samples/common/logger.i"
+	@echo "... usr/src/tensorrt/samples/common/logger.s"
 .PHONY : help
 
 

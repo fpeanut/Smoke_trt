@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/app/TensorRT/smoke_bushu/src_v7/common/logger.cpp
+logger.h
+/app/TensorRT/smoke_bushu/src_v7/common/logger.h
+logging.h
+/app/TensorRT/smoke_bushu/src_v7/common/logging.h
+
+/app/TensorRT/smoke_bushu/src_v7/common/logger.h
+logging.h
+/app/TensorRT/smoke_bushu/src_v7/common/logging.h
+
+/app/TensorRT/smoke_bushu/src_v7/common/logging.h
+NvInferRuntimeCommon.h
+/app/TensorRT/smoke_bushu/src_v7/common/NvInferRuntimeCommon.h
+cassert
+-
+ctime
+-
+iomanip
+-
+iostream
+-
+ostream
+-
+sstream
+-
+string
+-
+

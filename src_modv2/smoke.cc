@@ -5,6 +5,7 @@
 #include <cuda_runtime_api.h>
 #include"preprocess.h"
 // #include"trt_modulated_deform_conv.h"
+#include"plugin/trt_modulated_deform_conv.h"
 
 namespace apollo {
 namespace perception {

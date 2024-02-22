@@ -5,8 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CUDA
-  "/app/TensorRT/smoke_bushu/src_modv2/trt_cuda_helper.cu" "/app/TensorRT/smoke_bushu/build/CMakeFiles/mmcv_plugin.dir/src_modv2/trt_cuda_helper.cu.o"
-  "/app/TensorRT/smoke_bushu/src_modv2/trt_modulated_deform_conv_kernel.cu" "/app/TensorRT/smoke_bushu/build/CMakeFiles/mmcv_plugin.dir/src_modv2/trt_modulated_deform_conv_kernel.cu.o"
+  "/app/TensorRT/smoke_bushu/src_v7/plugin/trt_cuda_helper.cu" "/app/TensorRT/smoke_bushu/build/CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_cuda_helper.cu.o"
+  "/app/TensorRT/smoke_bushu/src_v7/plugin/trt_modulated_deform_conv_kernel.cu" "/app/TensorRT/smoke_bushu/build/CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_modulated_deform_conv_kernel.cu.o"
   )
 set(CMAKE_CUDA_COMPILER_ID "NVIDIA")
 
@@ -19,10 +19,11 @@ set(CMAKE_TARGET_DEFINITIONS_CUDA
 set(CMAKE_CUDA_TARGET_INCLUDE_PATH
   "/usr/include/opencv"
   "/usr/local/cuda/include"
-  "../src_modv2"
+  "../src_v7"
+  "../src_v7/common"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/app/TensorRT/smoke_bushu/src_modv2/trt_modulated_deform_conv.cpp" "/app/TensorRT/smoke_bushu/build/CMakeFiles/mmcv_plugin.dir/src_modv2/trt_modulated_deform_conv.cpp.o"
+  "/app/TensorRT/smoke_bushu/src_v7/plugin/trt_modulated_deform_conv.cpp" "/app/TensorRT/smoke_bushu/build/CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_modulated_deform_conv.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -35,7 +36,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/opencv"
   "/usr/local/cuda/include"
-  "../src_modv2"
+  "../src_v7"
+  "../src_v7/common"
   )
 
 # Targets to which this target links.

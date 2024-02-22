@@ -1,0 +1,1 @@
+/usr/local/cuda/bin/nvcc   -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/build.dir/build_v7.cu.o CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.o -o CMakeFiles/build.dir/cmake_device_link.o  -L/usr/local/cuda/lib64  -L/usr/local/cuda/targets/x86_64-linux/lib  -lgflags -lcublas -lpthread -lcudadevrt -lcudart_static -lrt -ldl 

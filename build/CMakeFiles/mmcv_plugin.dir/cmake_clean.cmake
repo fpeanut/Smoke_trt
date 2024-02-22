@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mmcv_plugin.dir/src_modv2/trt_modulated_deform_conv_kernel.cu.o"
-  "CMakeFiles/mmcv_plugin.dir/src_modv2/trt_cuda_helper.cu.o"
-  "CMakeFiles/mmcv_plugin.dir/src_modv2/trt_modulated_deform_conv.cpp.o"
+  "CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_modulated_deform_conv_kernel.cu.o"
+  "CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_cuda_helper.cu.o"
+  "CMakeFiles/mmcv_plugin.dir/src_v7/plugin/trt_modulated_deform_conv.cpp.o"
   "CMakeFiles/mmcv_plugin.dir/cmake_device_link.o"
   "libmmcv_plugin.pdb"
   "libmmcv_plugin.so"

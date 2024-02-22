@@ -80,7 +80,7 @@ int main(int argc, char **argv){
     trans_mat=_get_transform_matrix(center,scale,out_scale/FLAGS_down_scale);//下采样仿射变换矩阵
     std::cout<<"trans_mat:"<<trans_mat<<std::endl;
     
-    apollo::perception::camera::smoke::SMOKE smoke(smoke_path,trans_mat); // 实例化engine
+    smoke::SMOKE smoke(smoke_path,trans_mat); // 实例化engine
     cv::Mat image=cv::imread(img);
     cv::Mat dst;
 
